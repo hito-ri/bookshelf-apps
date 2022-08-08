@@ -34,10 +34,10 @@ function makeBooks(title, author,years,isDone){
     textTitle.innerHTML=title;
 
     const textAuthor = document.createElement('h4');
-    textAuthor.innerHTML = author
+    textAuthor.innerHTML =`Penulis: <span id="author">` + author + `</span>`;
 
     const textYears = document.createElement('p');
-    textYears.innerHTML=years
+    textYears.innerHTML=`Released (Years): <span id="years">` + years + `</span>`;
     
     const button = document.createElement('div');
     button.classList.add('action');
@@ -126,8 +126,8 @@ function addBookToCompletedRead(bookElement){
     const completedBooks = document.getElementById(COMPLETED_LIST);
 
     const title = bookElement.querySelector('.book_item h3').innerText;
-    const author = bookElement.querySelector('.book_item h4').innerText;
-    const years= bookElement.querySelector('.book_item p ').innerText;
+    const author = bookElement.querySelector('span#author').innerText;
+    const years= bookElement.querySelector('span#years').innerText;
 
     const newBook = makeBooks (title, author,years,true);
     completedBooks.append(newBook);
@@ -144,8 +144,8 @@ function undoBook(bookElement){
     const incompletedBooks = document.getElementById(UNCOMPLETED_LIST);
 
     const title = bookElement.querySelector('.book_item h3').innerText;
-    const author = bookElement.querySelector('.book_item h4').innerText;
-    const years= bookElement.querySelector('.book_item p').innerText;
+    const author = bookElement.querySelector('span#author').innerText;
+    const years= bookElement.querySelector('span#years').innerText;
 
     const newBook = makeBooks (title, author,years,false);
     incompletedBooks.append(newBook);
