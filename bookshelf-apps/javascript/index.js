@@ -165,6 +165,21 @@ function removeBook(bookElement){
 }
 
 
+function searchTheBooks (){
+    let input = document.getElementById('searchBookTitle').value;
+    input = input.toLowerCase();
+    let findtheBook = document.getElementsByClassName('book_item');
+    
+    for (let i =0;i<findtheBook.length;i++){
+        if (!findtheBook[i].innerHTML.toLowerCase().includes(input)){
+            event.preventDefault();
+            findtheBook[i].style.display='none';
+        }else{
+            findtheBook[i].style.display = 'book_item';
+        }
+    }
+}
+
 
 /* storage */
 
@@ -261,6 +276,11 @@ document.addEventListener('DOMContentLoaded',function(){
         event.preventDefault();
         addBook();
     });
+
+    searchBooks.addEventListener('submit',function(event){
+        event.preventDefault();
+        searchTheBooks();
+    })
 
     if (localStorageIsExist()){
         loadBookFromStorage();
