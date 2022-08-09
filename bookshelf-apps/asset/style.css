@@ -170,6 +170,100 @@ main {
     color: white;
 }
 
+.book_shelf > .book_list > .book_item > .action > .yellow {
+    background-color: yellow;
+    color: black;
+}
+
 .book_item h3 ,h4,p {
     margin: 8px 0;
+}
+
+
+
+
+
+.edit_section {
+    display: none;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+}
+
+.edit-content {
+    position: relative;
+    background-color: #f0f0ff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #f0f0ff;
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(161a1a);
+    width: 60%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.edit_section h2 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+form {
+    padding: 2px 16px
+}
+
+.edit {
+    margin: 8px 0;
+}
+
+.edit button{
+    background-color: aqua;
+    border: 0;
+    width: 25%;
+    padding: 5px;
+    margin: 0 20px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editBookSubmit{
+    font-weight: bolder;
+}
+
+
+
+.edit_section > form > button > span {
+    font-weight: bold;
+}
+
+.edit > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.edit label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.edit-id {
+    display: none;
 }

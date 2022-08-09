@@ -29,7 +29,7 @@
       </div>
       <div class="input">
         <label for="inputBookYear">Tahun</label>
-        <input id="inputBookYear" type="number" required>
+        <input id="inputBookYear" type="number" min="1250" max="2022" required>
       </div>
       <div class="input_inline">
         <label for="inputBookIsComplete">Selesai dibaca</label>
@@ -78,6 +78,36 @@
 <!--          <button class="red">Hapus buku</button>-->
 <!--        </div>-->
 <!--      </article>-->
+    </div>
+  </section>
+
+  <section class="edit_section" id="edit_section">
+    <div class="edit-content">
+      <div class="edit-body">
+        <h2>Edit Buku</h2>
+        <form id="inputEditBook">
+          <div class="edit-id">
+            <label for="edit-id" class="form-label">id</label>
+            <input type="text" id="edit-id" class="form-edit">
+          </div>
+          <div class="edit">
+            <label for="inputEditBookTitle">Judul</label>
+            <input class="form-edit" id="inputEditBookTitle" type="text">
+          </div>
+          <div class="edit">
+            <label for="inputEditBookAuthor">Penulis</label>
+            <input class="form-edit" id="inputEditBookAuthor" type="text">
+          </div>
+          <div class="edit">
+            <label  for="inputEditBookYear">Tahun</label>
+            <input class="form-edit" id="inputEditBookYear" type="number" min="1250" max="2022">
+          </div>
+          <div class="edit">
+            <button id="editBookSubmit" type="submit">Selesai</button>
+            <button id="editCancelSubmit" type="submit">Batal</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 </main>
